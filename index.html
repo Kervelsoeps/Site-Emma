@@ -1,151 +1,197 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Emma Calliauw</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Emma</title>
     <style>
-        /* Basisinstellingen voor de pagina */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+      /* Basisinstellingen voor de pagina */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* Pastel lila achtergrond voor de hele pagina */
-            background-color: #F3E8FF; 
-            color: #4A3E56; /* Donkerdere lila/grijze tint voor betere leesbaarheid */
-            padding-top: 80px;
-            padding-bottom: 70px;
-        }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        /* Pastel lila achtergrond voor de hele pagina */
+        background-color: #f3e8ff;
+        color: #4a3e56; /* Donkerdere lila/grijze tint voor betere leesbaarheid */
+        padding-top: 80px;
+        padding-bottom: 70px;
+      }
 
-        /* --- BOVENBALK (HEADER) --- */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 65px;
-            /* Iets lichtere pastel lila voor de balk */
-            background-color: #F9F5FF; 
-            border-bottom: 3px solid #D8B4FE; /* Pastel lila randje */
-            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 30px;
-            z-index: 1000;
-        }
+      /* --- BOVENBALK (HEADER) --- */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        /* Iets lichtere pastel lila voor de balk */
+        background-color: #f9f5ff;
+        border-bottom: 3px solid #d8b4fe; /* Pastel lila randje */
+        box-shadow: 0 4px 15px rgba(168, 85, 247, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        z-index: 1000;
+      }
 
-        .logo-link img {
-            height: 45px;
-            display: block;
-            border-radius: 8px;
-        }
+      .logo-link img {
+        height: 45px;
+        display: block;
+        border-radius: 8px;
+      }
 
-        /* Info knop - Pastelblauw */
-        .info-button {
-            display: inline-block;
-            background-color: #BAE6FD; /* Zacht pastelblauw */
-            color: #0369A1; /* Donkerblauwe tekst voor contrast */
-            text-decoration: none;
-            padding: 10px 22px;
-            border-radius: 20px; /* Mooie ronde knop */
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 1px solid #7DD3FC;
-        }
+      /* Info knop - Pastelblauw */
+      .info-button {
+        display: inline-block;
+        background-color: #bae6fd; /* Zacht pastelblauw */
+        color: #0369a1; /* Donkerblauwe tekst voor contrast */
+        text-decoration: none;
+        padding: 10px 22px;
+        border-radius: 20px; /* Mooie ronde knop */
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 1px solid #7dd3fc;
+      }
 
-        /* Hover effect info knop - Verandert naar pastelrood */
-        .info-button:hover {
-            background-color: #FECACA; /* Zacht pastelrood/roze */
-            color: #991B1B; /* Donkerrode tekst */
-            border-color: #FCA5A5;
-            transform: translateY(-1px); /* Subtiel zweef-effect */
-        }
+      /* Hover effect info knop - Verandert naar pastelrood */
+      .info-button:hover {
+        background-color: #fecaca; /* Zacht pastelrood/roze */
+        color: #991b1b; /* Donkerrode tekst */
+        border-color: #fca5a5;
+        transform: translateY(-1px); /* Subtiel zweef-effect */
+      }
 
-        /* --- ONDERBALK (FOOTER) --- */
-        .footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 50px;
-            /* Donkerdere pastel lila/paars voor de footer */
-            background-color: #6B21A8; 
-            color: #FAE8FF;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 14px;
-            font-weight: 500;
-            z-index: 1000;
-            box-shadow: 0 -4px 15px rgba(168, 85, 247, 0.1);
-        }
+      /* --- ONDERBALK (FOOTER) --- */
+      .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        /* Donkerdere pastel lila/paars voor de footer */
+        background-color: #6b21a8;
+        color: #fae8ff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 500;
+        z-index: 1000;
+        box-shadow: 0 -4px 15px rgba(168, 85, 247, 0.1);
+      }
 
-        /* --- CONTENT VAN DE PAGINA --- */
-        .main-content {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 40px;
-            background: #FFFFFF; /* Wit content-vlak zodat het rustig oogt */
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.05);
-            border: 1px solid #E9D5FF;
-        }
+      /* --- CONTENT VAN DE PAGINA --- */
+      .main-content {
+        max-width: 800px;
+        margin: 30px auto;
+        padding: 40px;
+        background: #ffffff; /* Wit content-vlak zodat het rustig oogt */
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(168, 85, 247, 0.05);
+        border: 1px solid #e9d5ff;
+      }
 
-        h1 {
-            color: #581C87; /* Diep lila/paars voor de titel */
-            margin-bottom: 20px;
-            font-size: 2rem;
-        }
+      h1 {
+        color: #581c87; /* Diep lila/paars voor de titel */
+        margin-bottom: 20px;
+        font-size: 2rem;
+      }
 
-        p {
-            line-height: 1.7;
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-        }
+      p {
+        line-height: 1.7;
+        margin-bottom: 15px;
+        font-size: 1.05rem;
+      }
 
-        /* Voorbeeld van een pastelrode accentknop in de tekst */
-        .accent-box {
-            background-color: #FEE2E2; /* Pastelrood achtergrond */
-            border-left: 5px solid #FCA5A5; /* Pastelrode rand */
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 25px;
-            color: #991B1B;
-        }
+      /* Voorbeeld van een pastelrode accentknop in de tekst */
+      .accent-box {
+        background-color: #fee2e2; /* Pastelrood achtergrond */
+        border-left: 5px solid #fca5a5; /* Pastelrode rand */
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 25px;
+        color: #991b1b;
+      }
+      .video-card-iframe {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Verhouding */
+        height: 0;
+        overflow: hidden;
+        border-radius: 12px;
+        border: 2px solid #e9d5ff;
+      }
+
+      .video-card-iframe iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <nav class="navbar">
-        <a href="index.html" class="logo-link">
-            <img src="logo.jpg" alt="Logo Emma Calliauw">
-        </a>
-        
-        <a href="info.html" class="info-button">Info</a>
+      <a href="index.html" class="logo-link">
+        <img src="logo.jpg" alt="Logo Emma" />
+      </a>
+
+      <a href="info.html" class="info-button">Info</a>
     </nav>
 
     <main class="main-content">
-        <h1>Welkom op mijn website</h1>
-        <p>Dit is de homepagina gehuld in een stijlvol pastel lila palet. De bovenbalk en onderbalk blijven netjes op hun plek staan tijdens het scrollen.</p>
-        
-        <div class="accent-box">
-            <strong>Pastel Accent:</strong> Hier zie je hoe de combinatie met pastelrood eruitziet in een informatieblok! De knop rechtsboven kleurt ook pastelrood zodra je er met de muis op gaat staan.
-        </div>
-        
-        <p style="margin-top: 400px; color: #A855F7;">
-            <em>(Scrol naar beneden om te zien hoe de balken vast blijven staan)</em>
+      <section class="channel-intro">
+        <h1>Welkom bij EmmaHobbyhorsing!</h1>
+        <p>
+          Hoi! Ik ben Emma. Op mijn YouTube-kanaal neem ik je mee in de
+          geweldige wereld van hobbyhorsing. Van spannende sprongen en
+          dressuur-bloopers tot creatieve DIY's voor je halsters en dekens: je
+          vindt het hier allemaal. Leuk dat je een kijkje komt nemen op mijn
+          info-site!
         </p>
-        <p style="margin-top: 400px;">Je bent aan het einde van de pagina gekomen.</p>
+      </section>
+
+      <section class="video-section">
+        <h2>Mijn Nieuwste Video</h2>
+        <div class="video-grid">
+          <div class="video-card-iframe">
+            <iframe
+              src="https://www.youtube.com/embed/S287D0NqS9U"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
+      </section>
+      <div class="accent-box">
+        <strong>Blijf op de hoogte van nieuwe video's!</strong><br />
+        Wil je geen enkele stalvlog of wedstrijd-update missen? Abonneer je dan
+        gezellig op mijn kanaal.
+        <a
+          href="https://www.youtube.com/@Emmahobbyhorsing45"
+          target="_blank"
+          class="sub-button"
+          >Abonneer op YouTube</a
+        >
+      </div>
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 Emma Calliauw. Alle rechten voorbehouden.</p>
+      <p>&copy; 2025 Emma Calliauw. Alle rechten voorbehouden.</p>
     </footer>
-
-</body>
+  </body>
 </html>
