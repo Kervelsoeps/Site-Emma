@@ -145,6 +145,52 @@
         height: 100%;
         border: 0;
       }
+      /* --- RESPONSIVE DESIGN VOOR GSM (Schermen smaller dan 768px) --- */
+      @media screen and (max-width: 768px) {
+        body {
+          /* Iets minder witruimte aan de boven- en onderkant op mobiel */
+          padding-top: 65px;
+          padding-bottom: 55px;
+        }
+
+        .navbar {
+          padding: 0 15px; /* Minder zijruimte in de bovenbalk */
+          height: 55px;
+        }
+
+        .logo-link img {
+          height: 35px; /* Het logo wordt iets kleiner zodat het mooi past */
+        }
+
+        .info-button {
+          padding: 8px 16px; /* De knop wordt iets compacter */
+          font-size: 0.9rem;
+        }
+
+        .main-content {
+          margin: 15px; /* Minder marge rondom het witte vlak */
+          padding: 20px; /* Minder binnenuimte zodat tekst meer plaats heeft */
+          border-radius: 12px;
+        }
+
+        h1 {
+          font-size: 1.5rem; /* Grotere titels worden iets kleiner op gsm */
+        }
+
+        .video-section h2 {
+          font-size: 1.25rem;
+        }
+
+        p {
+          font-size: 0.95rem; /* Tekst leest fijner als deze een fractie kleiner is op mobiel */
+        }
+
+        .footer {
+          font-size: 12px; /* De copyright-tekst past zo altijd op één regel */
+          padding: 0 10px;
+          text-align: center;
+        }
+      }
     </style>
   </head>
   <body>
