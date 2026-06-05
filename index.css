@@ -110,6 +110,27 @@ p {
   margin-top: 25px;
   color: #991b1b;
 }
+
+/* YouTube Abonneerknop in de accent-box */
+.sub-button {
+  display: inline-block;
+  background-color: #fca5a5; /* Zacht pastelrood */
+  color: #991b1b;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+  border: 1px solid #fca5a5;
+}
+
+.sub-button:hover {
+  background-color: #ef4444; /* Iets feller rood bij hover */
+  color: #ffffff;
+  border-color: #ef4444;
+}
+
 .video-card-iframe {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 Verhouding */
@@ -127,6 +148,7 @@ p {
   height: 100%;
   border: 0;
 }
+
 /* --- RESPONSIVE DESIGN VOOR GSM (Schermen smaller dan 768px) --- */
 @media screen and (max-width: 768px) {
   body {
@@ -165,6 +187,13 @@ p {
 
   p {
     font-size: 0.95rem; /* Tekst leest fijner als deze een fractie kleiner is op mobiel */
+  }
+
+  .sub-button {
+    display: block;
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: center;
   }
 
   .footer {
